@@ -1,0 +1,37 @@
+$engine: 3
+$onesync: infinity
+name: GumFramework
+version: 1.0.0
+author: Gum
+description: A new complete and fresh framework for RedM, enjoy now and join us in this new adventure
+
+
+
+tasks:
+  # Download default CFX resources
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    ref: master
+    subpath: resources
+    dest: ./resources/[cfx-default]
+  
+  # Basic & SQL
+  - action: download_github
+    src: https://github.com/Nicoo34/GumFramework-Recipe
+    ref: main
+    dest: ./tmp/gum_framework
+
+  - action: move_path
+    src: ./tmp/gum_framework/server.cfg
+    dest: ./server.cfg
+
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/gum_framework/GumFramework.sql
+
+# Framework
+
+  - action: download_github
+    src: https://github.com/gummyantifi/Gum_Framework_Core
+    ref: main
+    dest: ./resources/[gum_framework]/*
