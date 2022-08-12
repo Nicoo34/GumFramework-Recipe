@@ -33,4 +33,4 @@ tasks:
   - action: download_github
     src: https://github.com/gummyantifi/Gum_Framework_Core
     ref: main
-    dest: ./resources/[gum_framework]/*
+    dest: ./resources/[gum_framework]/
