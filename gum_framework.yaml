@@ -20,8 +20,6 @@ tasks:
     ref: main
     dest: ./tmp/gum_framework
 
-    - action: remove_path
-    path: ./resources/[cfx-default]/[managers]/spawnmanager
 
   - action: move_path
     src: ./tmp/gum_framework/server.cfg
@@ -37,3 +35,6 @@ tasks:
     src: https://github.com/gummyantifi/Gum_Framework_Core
     ref: main
     dest: ./resources/[gum_framework]/
+
+  - action: remove_path
+    path: ./resources/[cfx-default]/[managers]/spawnmanager
